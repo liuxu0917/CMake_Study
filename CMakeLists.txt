@@ -12,9 +12,9 @@ set (LIBRARY_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/lib)  #设置库文件输出目�
 
 
 include_directories (${PROJECT_SOURCE_DIR}/include)  #设置头文件目录
-include_directories (${PROJECT_SOURCE_DIR}/Utils)  #设置头文件目录
 
-#add_subdirectory (Utils)  #设置子目录
+add_subdirectory (Utils)  #设置子目录
+add_subdirectory (Tools)  #设置子目录
 
 link_directories(${PROJECT_SOURCE_DIR}/lib)  #设置静态库目录
 
