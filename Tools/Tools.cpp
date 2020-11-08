@@ -2,7 +2,7 @@
 // Created by liuxu on 2020-05-23.
 //
 
-#include "../include/Tools.h"
+#include "Tools.h"
 
 void Tools::OutPut()
 {

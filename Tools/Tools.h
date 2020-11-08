@@ -5,11 +5,11 @@
 #ifndef CMAKE_STUDY_TOOLS_H
 #define CMAKE_STUDY_TOOLS_H
 
-#include<iostream>
+#include "Common.h"
 
 class Tools {
 public:
-    void OutPut();
+    static void OutPut();
 };
 
 

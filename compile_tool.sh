@@ -1,5 +1,3 @@
-cd /root/CMake_Study/build
-make clean
-cmake ..
+cd build
 make
 ./../output/CMake_Study
