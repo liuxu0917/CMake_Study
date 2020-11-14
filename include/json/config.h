@@ -5,7 +5,7 @@
 
 #ifndef JSON_CONFIG_H_INCLUDED
 #define JSON_CONFIG_H_INCLUDED
-#include <cstddef>
+//#include <cstddef>
 #include <cstdint>
 #include <istream>
 #include <memory>

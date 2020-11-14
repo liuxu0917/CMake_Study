@@ -2,7 +2,7 @@
 // Created by liuxu on 2020-10-31.
 //
 
-#include "RegStduy.h"
+#include "RegStduy.hpp"
 #include <regex>
 
 
@@ -23,12 +23,6 @@ void RegStduy::Common(string &source, string &reg) {
     }
 }
 
-void RegStduy::MailTest() {
-    string str("Email liuxu0917@live.com abc");
-    string e("(\\w+)@(\\w+\\.com)");
-    Common(str, e);
-}
-
 void RegStduy::NumTest() {
     string str("asdadas123asdasdas456asdasdasd7890asdasd");
     string e("(\\d+)");
@@ -43,21 +37,13 @@ void RegStduy::Test1() {
 
 void RegStduy::StringReplace() {
     string str("asdadas123asdasdas456asdasdasd7890asdasd");
-    regex e("(\\d+)");
-    smatch m;
-    string regStr = str;
-    while (std::regex_search(regStr, m, e)) {
-        string result = m.begin()->str();
-        str.replace(str.find(result), result.size(), '[' + result + ']');
-        regStr = m.suffix();
-    }
-    cout << str << endl;
+    cout << regex_replace(str,regex("(\\d+)"),"[$1]") << endl;
 }
+
 
 
 void RegStduy::MainTest() {
     RegStduy regStduy;
-    regStduy.MailTest();
     regStduy.NumTest();
     regStduy.Test1();
     regStduy.StringReplace();

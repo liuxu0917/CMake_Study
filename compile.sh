@@ -1,4 +1,4 @@
-cd /root/CMake_Study/build
+cd build
 make clean
 cmake ..
 make
