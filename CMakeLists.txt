@@ -8,10 +8,13 @@ set(CMAKE_BUILD_TYPE "Debug") #设置Debug模式
 
 IF (WIN32)
     MESSAGE(STATUS "Now is windows")
+    add_definitions(-D WIN32)
 ELSEIF (APPLE)
     MESSAGE(STATUS "Now is Apple systens.")
+    add_definitions(-D APPLE)
 ELSEIF (UNIX)
     MESSAGE(STATUS "Now is UNIX-like OS's.")
+    add_definitions(-D UNIX)
 ENDIF ()
 
 set (EXECUTABLE_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/output)  #设置执行文件输出目录
@@ -22,8 +25,7 @@ SET(CMAKE_BUILD_WITH_INSTALL_RPATH TRUE)
 SET(CMAKE_INSTALL_RPATH ${PROJECT_SOURCE_DIR}/lib)   #设置运行时动态链接库加载目录
 
 include_directories (${PROJECT_SOURCE_DIR}/include)  #设置头文件目录
-include_directories (${PROJECT_SOURCE_DIR}/include/json)  #设置头文件目录
-include_directories (${PROJECT_SOURCE_DIR}/include/sqlite)  #设置头文件目录
+include_directories (${PROJECT_SOURCE_DIR}/include/sqlite)
 
 
 include_directories (${PROJECT_SOURCE_DIR}/Case)  #设置头文件目录
@@ -37,7 +39,7 @@ add_subdirectory (CPlusPlus)
 
 link_directories(${PROJECT_SOURCE_DIR}/lib)  #设置静态库目录
 
-link_libraries(jsoncpp sqlite)  #链接三方库
+#link_libraries(jsoncpp sqlite)  #链接三方库
 link_libraries(Utils Case CPlusPlus)  #链接库
 
 add_executable (CMake_Study main.cpp)
