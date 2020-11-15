@@ -12,6 +12,10 @@ void run(list<Study*> &itemList){
     }
 }
 int main() {
+
+#ifdef UNIX
+    cout<<"UNIX"<<endl;
+#endif
     Utils::OutPut();
     list<Study*> itemList;
     itemList.push_back(new RegStduy);
