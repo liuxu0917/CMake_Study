@@ -1,5 +1,7 @@
 cmake_minimum_required(VERSION 3.1)
-project(jsoncpp)  #设置项目名称
+project(json)
+
+set (CMAKE_CXX_STANDARD 14)
 
 
 set(JSONCPP_INCLUDE_DIR ../../include/json)

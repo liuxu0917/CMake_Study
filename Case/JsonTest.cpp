@@ -11,7 +11,8 @@ void JsonTest::MainTest() {
     array.append(1);
     array.append(2);
     array.append(3);
-    jsonObject["array"]= array;
-    cout<<jsonObject.toStyledString()<<endl;
-    cout<<jsonObject.type()<<endl;
+    int64_t  x = 0x7fffffffffffffff;
+    jsonObject["long"] = x;
+    jsonObject["array"] = array;
+    cout << jsonObject.toStyledString() << endl;
 }
